@@ -1,4 +1,3 @@
-<div class="container">
 
 <div class="row">
     <div class="col-3">
@@ -7,13 +6,20 @@
         <p>stats</p>
         </div>
     </div>
-    </div>
-    <div class="col-6">
     <div class="card">
         <div class="card-body">
-        <p>feed</p>
+        <p>trends</p>
         </div>
     </div>
+</div>
+        <div class="col-6">
+    <% for @p in @posts %>
+    <div class="card">
+        <div class="card-body">
+        <p><%= @p.content %></p>
+        </div>
+    </div>
+    <% end %>
     </div>
     <div class="col-3">
     <div class="card">
@@ -24,7 +30,7 @@
     </div>
 </div>
 
-<!--pocetak drugog reda (row 2)-->
+<!--pocetak drugog reda (row 2)
 
 <div class="row">
 <div class="col-3">
@@ -36,4 +42,4 @@
 </div>
 </div>
 
-</div>
+</div>-->

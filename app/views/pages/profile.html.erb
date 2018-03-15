@@ -16,11 +16,13 @@
     </div>
     </div>
     <div class="col-6">
+    <% for @p in @posts %>
     <div class="card">
         <div class="card-body">
-        <p>feed</p>
+        <p><%= @p.content %></p>
         </div>
     </div>
+    <% end %>
     </div>
     <div class="col-3">
     <div class="card">
@@ -28,12 +30,17 @@
         <p>who to follow</p>
         </div>
     </div>
+    <div class="card">
+        <div class="card-body">
+        <p>trends</p>
+        </div>
+    </div>
     </div>
 </div>
 
 <!--pocetak drugog reda (row 2)-->
 
-<div class="row mt-3">
+<!--<div class="row">      #<div class="row mt-3">
 <div class="col-3 offset-9">
     <div class="card">
         <div class="card-body">
@@ -41,4 +48,4 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
