@@ -6,7 +6,7 @@
     </div>
     </div>
 </div>
-
+<!--pocetak drugog reda (row 2)-->
 <div class="row">
     <div class="col-3">
     <div class="card">
@@ -16,6 +16,8 @@
     </div>
     </div>
     <div class="col-6">
+        <%= render'/components/post_form' %>
+
     <% for @p in @posts %>
     <div class="card">
         <div class="card-body">
@@ -38,7 +40,7 @@
     </div>
 </div>
 
-<!--pocetak drugog reda (row 2)-->
+<!--pocetak drugog reda/prva varijanta (row 2)-->
 
 <!--<div class="row">      #<div class="row mt-3">
 <div class="col-3 offset-9">
