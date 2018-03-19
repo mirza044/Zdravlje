@@ -1,2 +1,22 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in?    #if the user is not signed in, render this %>
+<style>
+body {  /*html tag replaced with body tag*/
+    background: url("first_image.jpg") no-repeat center center fixed; /*only display once, center horizontal and vertical, dont let scroll change position.*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover; /*cover the whole html element*/
+    -o-background-size: cover;
+    background-size: cover;
+}
+</style>
+
+<div class="container">
+<h1>
+Zdrava Hrana!
+</h1>
+</div>
+
+<% else   #if the user is IS signed in, render this %>
+
+Signed in
+
+<%end%>

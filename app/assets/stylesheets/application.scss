@@ -15,9 +15,13 @@
 
  body {
 
-    background-color: rgba(212, 216, 212, 0.25);
+    background-color: rgba(212, 216, 212, 0.35);
  }
 
  .navbar {
     background-color: white;
+ }
+ .navbar-brand {
+    position: absolute;
+    left: 43%;
  }
