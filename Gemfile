@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'octicons_helper'
+gem 'octicons'
 #using devise for authentication and user acoounts.
 gem 'devise'
 #use jqery as javascript library

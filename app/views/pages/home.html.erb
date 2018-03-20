@@ -20,7 +20,7 @@
         <div class="card-body row">
        
             <div class="col-sm-1">
-            <img src="/Twitter.png" height="50px" width="50px"></img>
+            <img src="/Twitter.png" class="rounded-img" height="50px" width="50px"></img>
             </div>
             <div class="col-sm-11">
             <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
@@ -29,7 +29,11 @@
             <div class="col-sm-12">
             <p class="post.links">
             
-            <span class="glyphicons glyphicons-heart"></span>
+            <span class="o-icon"><%= octicon "reply" %> </span>
+            <span class="o-icon"><%= octicon "git-compare" %> </span>
+            <span class="o-icon"><%= octicon "heart" %> </span>
+            <span class="o-icon"><%= octicon "kebab-horizontal" %> </span>
+            <a href="">Vidi razgovor</a>
             
             </p>
             </div>
