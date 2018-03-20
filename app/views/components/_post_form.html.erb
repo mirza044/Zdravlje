@@ -1,8 +1,8 @@
-<div class="card">
+<div class="card post-form-card">
         <div class="card-body row">
        
             <div class="col-sm-1">
-            <img src="/Twitter.png" class="rounded-img" height="50px" width="50px"></img>
+            <img src="/Twitter.png" class="rounded-img" height="35px" width="35px"></img>
             </div>
             <div class="col-sm-11">
            
@@ -10,7 +10,7 @@
 
   <div class="field" style="margin-left: 10px;">
     <%= f.text_field :content, autofocus: true, class: "form-control" %>
-    <span class="btn btn-submit" style="float: right"><%= f.submit "Dodaj tekst" %></span>
+    <span class="btn btn-submit" style="float: right; margin-top: 3px;"><%= f.submit "Dodaj tekst", class: "btn btn-primary" %></span>
   </div>
 <% end %>
             

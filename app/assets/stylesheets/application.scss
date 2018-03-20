@@ -32,9 +32,9 @@
     display: block;
  }
 
- /*.post-card {
-     margin-top: -21px;       -potreban broj pixela za uklanjanje margina-
- }*/
+ .post-card {
+     margin-top: -21px;       /*potreban broj pixela za uklanjanje margina*/
+ }
 
  .post-title {
      text-align: left;
@@ -63,4 +63,8 @@
     opacity: 0.4;
     font-size: 120%;
     margin-right: 75px;
+ }
+
+ .post-form-card {
+     margin-bottom: -48px;
  }
