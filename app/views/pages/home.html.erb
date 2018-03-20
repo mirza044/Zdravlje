@@ -12,16 +12,33 @@
         </div>
     </div>
 </div>
-        <div class="col-6">
+<div class="col-6">
+    <%= render'/components/post_form' %><br><br>
+
     <% for @p in @posts %>
     <div class="card">
-        <div class="card-body">
-        <p><%= @p.content %></p>
+        <div class="card-body row">
+       
+            <div class="col-sm-1">
+            <img src="/Twitter.png" height="50px" width="50px"></img>
+            </div>
+            <div class="col-sm-11">
+            <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+            <p class="post-content"><%= @p.content %></p>
+            </div>
+            <div class="col-sm-12">
+            <p class="post.links">
+            
+            <span class="glyphicons glyphicons-heart"></span>
+            
+            </p>
+            </div>
         </div>
     </div>
     <% end %>
-    </div>
-    <div class="col-3">
+
+</div>
+<div class="col-3">
     <div class="card">
         <div class="card-body">
         <p>about</p>
