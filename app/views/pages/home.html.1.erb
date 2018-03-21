@@ -1,15 +1,24 @@
+
 <div class="row">
     <div class="col-3">
-
         <div class="card">
-            <div class="card-body">
-                <h5 style="color: grey; font-size: 125%">Istraži</h5>
-                <p style="opacity: 0.5; font-size: 90%;">
-                This page aggregates posts from ALL users. This means that you can find new people to follow,
-                and your posts also appear here so other people can see your posts and follow you
-                if they chose.
-                </p>
-            </div>
+            <img class="card-img-top" src="zdravljelogo.png" alt="Zdravlje">
+                <div class="card-body row">
+                    <div class="col-sm-2">
+                        <img src="/Twitter.png" height="50px" width="50px" class="rounded-img">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4 style="margin-left:20px;"><%= current_user.username %></h4>
+                    </div>
+                    <div class="col-sm-12 row" style="margin-top: 10px;">
+                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">POSTS<br>
+                            <h6 style="color:#0084B4; font-size: 200%;">16</h6>
+                        </div>
+                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">FOLLOWERS<br>
+                            <h6 style="color:#0084B4; font-size: 200%;">15</h6>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div class="card">
                 <div class="card-body">
@@ -24,7 +33,7 @@
     </div>
 </div>
 <div class="col-6">
-    <%= render'/components/post_form' %><% if user_signed_in? %> <br> <%end%> <br>
+    <%= render'/components/post_form' %><br><br>
 
     <% for @p in @posts %>
     <div class="card">
@@ -63,21 +72,24 @@
 
 </div>
 <div class="col-3">
-
-     <div class="card">
-        <div class="card-body">
-        <h5 style="color: grey; font-size: 125%">who to follow</h5>
-        <% for @u in @toFollow do %>
-            <p style="font-weight: bold; opacity: 0.85;"><a href="/user/<%= @u.username %>"><%= @u.username %></a></p>
-            <%end%>
-        </div>
-    </div>
-
     <div class="card">
         <div class="card-body">
         <p style="opacity: 0.5; font-size: 90%;">© 2018 Zdravlje About Help Center Terms Privacy policy Cookies Ads info Brand Blog Status Apps Jobs Marketing Businesses Developers</p>
         </div>
     </div>
-
     </div>
 </div>
+
+<!--pocetak drugog reda (row 2)
+
+<div class="row">
+<div class="col-3">
+    <div class="card">
+        <div class="card-body">
+        <p>trends</p>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>-->
