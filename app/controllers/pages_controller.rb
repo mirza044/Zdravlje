@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 
   #back-end code for pages/home
   def profile
+
     #grab the username from the URL as :id
     if (User.find_by_username(params[:id]))
       @username = params[:id]
@@ -21,8 +22,14 @@ class PagesController < ApplicationController
       redirect_to root_path, :notice=> "User not found"
     end
 
+    #grab the username from the url as :id
+    
+
     @posts = Post.all.where("user_id = ?", User.find_by_username(params[:id]).id)
     @newPost = Post.new
+
+    @toFollow=User.all.last(5)
+
   end
 
   #back-end code for pages/home

@@ -1,42 +1,80 @@
 
-<div clas="row">
-    
-    <div class="jumbotron">
-        <%= @username %>
-    
-    </div>
-</div>
+<!--<div clas="row">
+        <div class="jumbotron"><%= @username %></div>
+        <img src="/first_image.jpg" class="profile-banner">
+</div>-->
 <!--pocetak drugog reda (row 2)-->
 <div class="row">
     <div class="col-3">
-    <div class="card">
-        <div class="card-body">
-        <p>stats</p>
+        <div class="col-sm-12" style="margin-top: -200px">
+            <img src="/Twitter.png" height="200px" widht="200px" class="rounded-img">
+        </div>
+        <div class="col-sm-12">
+        <h3 style="font-weight: bold;"><%= params[:id] %></h3>
+        <p>
+        Zdrava ishrana, prirodni sokovi i svježe voće i povrće.
+        </p>
         </div>
     </div>
-    </div>
     <div class="col-6">
-        <%= render'/components/post_form' %>
+        <%= render'/components/post_form' %><br><br>
 
     <% for @p in @posts %>
     <div class="card">
-        <div class="card-body">
-        <p><%= @p.content %></p>
+        <div class="card-body row">
+       
+            <div class="col-sm-1">
+            <img src="/Twitter.png" class="rounded-img" height="50px" width="50px"></img>
+            </div>
+            <div class="col-sm-11">
+            <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+            <p class="post-content"><%= @p.content %></p>
+            </div>
+            <div class="col-sm-12">
+            <p class="post.links">
+            
+            <span class="o-icon"><%= octicon "reply" %> </span>
+            <span class="o-icon"><%= octicon "git-compare" %> </span>
+            <span class="o-icon"><%= octicon "heart" %> </span>
+            <span class="o-icon"><%= octicon "kebab-horizontal" %> </span>
+            <a href="">Vidi razgovor</a>
+            
+            </p>
+            </div>
         </div>
     </div>
     <% end %>
+
+    <div class="card">
+        <div class="card-body row">
+            <div class="col-sm-12">
+            <center><img src="/Twitter.png" height="25px" width="25px"></img>
+            <a href="#top"><p class="opacity: .7;">Vrati se na vrh <%= octicon "arrow-up" %></p></a></center>
+            </div>
+        </div>
+    </div>
+
     </div>
     <div class="col-3">
     <div class="card">
         <div class="card-body">
-        <p>who to follow</p>
+        <h5 style="color: grey; font-size: 125%">who to follow</h5>
+        <% for @u in @toFollow do %>
+            <p style="font-weight: bold; opacity: 0.85;"><a href="/user/<%= @u.username %>"><%= @u.username %></a></p>
+            <%end%>
         </div>
     </div>
-    <div class="card">
-        <div class="card-body">
-        <p>trends</p>
+        <div class="card">
+                <div class="card-body">
+                    <h5 style="color:grey; font size: 125%;">Trends</h5>
+                    <a href="">#Trend #1</a><br>
+                        <span style="color: grey;">31k Posts</span><br><br>
+                    <a href="">#Trend #1</a><br>
+                        <span style="color: grey;">25k Posts</span><br><br>
+                    <a href="">#Trend #1</a><br>
+                        <span style="color: grey;">16k Posts</span><br><br>
+                </div>
         </div>
-    </div>
     </div>
 </div>
 
