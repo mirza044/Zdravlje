@@ -55,8 +55,9 @@
     </div>
 
     </div>
-    <div class="col-3">
-    <div class="card">
+<div class="col-3">
+        <%= render '/components/follow_button', :user => User.find_by_username(params[:id]) %>
+    <div class="card">   
         <div class="card-body">
         <h5 style="color: grey; font-size: 125%">who to follow</h5>
         <% for @u in @toFollow do %>
