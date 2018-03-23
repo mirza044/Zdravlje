@@ -16,11 +16,11 @@ gem 'bootstrap', '~> 4.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+gem 'sqlite3'
 #use pg for heroku database
-gem 'pg'
+#gem 'pg'
 #herolu pre-req
-gem 'rails_12factor', group: :production #don't use locally, only on heroku
+#gem 'rails_12factor', group: :production #don't use locally, only on heroku
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
