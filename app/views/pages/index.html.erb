@@ -1,6 +1,6 @@
 <% if !user_signed_in?    #if the user is not signed in, render this %>
 <style>
-body {  /*html tag replaced with body tag*/
+body { /*html tag replaced with body tag*/
     background:linear-gradient(/*somewhat transparent film on top of the BG to make it look darker.*/
         rgba(0,0,0, 0.7),
         rgba(0,0,0, 0.7)),url("first_image.jpg") no-repeat center center fixed;
@@ -49,12 +49,83 @@ h1 {
 }
 </style>
 
-<div class="container-index row">
+<div class="row">
+
+     <div class="col-3">
+        <div class="col-sm-12" style="margin-top: -200px">
+            <img src="/Twitter.png" height="200px" widht="200px" class="rounded-img">
+        </div>
+        <div class="col-sm-12">
+        <h3 style="font-weight: bold;"><%= params[:id] %></h3>
+        <p>
+        Zdrava ishrana, prirodni sokovi i svježe voće i povrće.
+        </p>
+        </div>
+    </div>
+    <div class="col-6">
+        <%= render'/components/post_form' %><br><br>
+
+    <% for @p in @posts %>
+    <div class="card">
+        <div class="card-body row">
+       
+            <div class="col-sm-1">
+            <img src="/Twitter.png" class="rounded-img" height="50px" width="50px"></img>
+            </div>
+            <div class="col-sm-11">
+            <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+            <p class="post-content"><%= @p.content %></p>
+            </div>
+            <div class="col-sm-12">
+            <p class="post.links">
+            
+            <span class="o-icon"><%= octicon "reply" %> </span>
+            <span class="o-icon"><%= octicon "git-compare" %> </span>
+            <span class="o-icon"><%= octicon "heart" %> </span>
+            <span class="o-icon"><%= octicon "kebab-horizontal" %> </span>
+            <a href="">Vidi razgovor</a>
+            
+            </p>
+            </div>
+        </div>
+    </div>
+    <% end %>
+
+    <div class="card">
+        <div class="card-body row">
+            <div class="col-sm-12">
+            <center><img src="/Twitter.png" height="25px" width="25px"></img>
+            <a href="#top"><p class="opacity: .7;">Vrati se na vrh <%= octicon "arrow-up" %></p></a></center>
+            </div>
+        </div>
+</div>
+
+</div>
+
+<div class="col-3">
+        
+        <div class="card">
+                <div class="card-body">
+                    <h5 style="color:grey; font size: 125%;">Trends</h5>
+                    <a href="">#Trend #1</a><br>
+                        <span style="color: grey;">31k Posts</span><br><br>
+                    <a href="">#Trend #1</a><br>
+                        <span style="color: grey;">25k Posts</span><br><br>
+                    <a href="">#Trend #1</a><br>
+                        <span style="color: grey;">16k Posts</span><br><br>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<div class="container-index row">
     <div class="col-sm-6">
         <h1>Zdrava Hrana!</h1>
 
         <p class="text">
-        Zdrava ishrana. Prirodni sokovi.<br> Svježe voće i povrće. Domaći proizvodi.
+        Prirodni sokovi. Zdrava hrana<br> Svježe voće i povrće. Domaći proizvodi.
         </p>
     </div>
     <div class="col-sm-6">
@@ -68,27 +139,10 @@ h1 {
 
     <div class="col-sm-12">
         <p class="footer-links">
-About
- Help Center
- Blog
- Status
- Jobs
- Terms
- Privacy Policy
- Cookies
- Ads info
- Brand
- Apps
- Advertise
- Marketing
- Businesses
- Developers
- Directory
- Settings
- © 2018 Zdrava Hrana
+            © 2018 Zdravlje
         </p>
     </div>
-</div>
+</div>-->
 
 <% else   #if the user is IS signed in, render this %>
 
