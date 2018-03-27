@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   resources :relationships
   resources :posts
+  resources :articles
 
   #Define root page
   root 'pages#index'
