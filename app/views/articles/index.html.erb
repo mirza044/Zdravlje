@@ -5,16 +5,26 @@
 
 <table>
   <tr>
-    <th>Naziv</th>
+    <th>Naslov</th>
+    <th>&nbsp</th>
     <th>Tekst</th>
-    <th></th>
+    <th>&nbsp</th>
   </tr>
  
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
+      <td>&nbsp</td>
       <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
+      <td>&nbsp</td>
+      <td><%= link_to 'Prikaži', article_path(article) %></td>
+      <td>&nbsp</td>
+      <td><%= link_to 'Uredi', edit_article_path(article) %></td>
+      <td>&nbsp</td>
+      <td><%= link_to 'Izbriši', article_path(article),
+              method: :delete,
+              data: { confirm: 'Jeste li sigurni?' } %></td>
+      <td>&nbsp</td>
     </tr>
   <% end %>
 </table>
