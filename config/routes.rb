@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     end
   end
   resources :relationships
-  resources :posts
+  resources :posts do
+    resources :komentars
+  end
   resources :articles do
     resources :comments
   end

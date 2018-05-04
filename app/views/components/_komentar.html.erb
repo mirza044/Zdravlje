@@ -1,0 +1,15 @@
+<p>
+  <strong>Ime:</strong>
+  <%= komentar.ime %>
+</p>
+ 
+<p>
+  <strong>Komentar:</strong>
+  <%= komentar.tekst %>
+</p>
+
+<p>
+  <%= link_to 'Izbriši komentar', [komentar.post, komentar],
+               method: :delete,
+               data: { confirm: 'Da li ste sigurni?' } %>
+</p>
