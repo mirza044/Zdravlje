@@ -1,16 +1,16 @@
 
 <p>
   <strong>Naslov:</strong>
-  <%= @post.title %>
+  <%= @p.naslov %>
 </p>
  
 <p>
   <strong>Tekst:</strong>
-  <%= @post.content %>
+  <%= @p.content %>
 </p>
 
 <h2>Komentari</h2>
-<%= render @post.komentars %>
+<%= render @p.komentars %>
 
 <h2>Dodaj komentar:</h2>
 <%= render 'komentars/form' %>

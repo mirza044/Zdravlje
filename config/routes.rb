@@ -8,10 +8,13 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+
   resources :relationships
+  
   resources :posts do
     resources :komentars
   end
+  
   resources :articles do
     resources :comments
   end
@@ -26,6 +29,7 @@ Rails.application.routes.draw do
   get '/user/:id'=> 'pages#profile'
   get '/explore' => 'pages#explore'
   get '/new' => 'articles#new'
+  get '/show' => 'pages#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
