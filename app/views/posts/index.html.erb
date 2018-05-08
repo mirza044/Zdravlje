@@ -1,0 +1,30 @@
+<h1>Lista postova</h1>
+ 
+<%= link_to 'Novi post', new_post_path %>
+
+
+<table>
+  <tr>
+    <th>Naslov</th>
+    <th>&nbsp</th>
+    <th>Tekst</th>
+    <th>&nbsp</th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.naslov %></td>
+      <td>&nbsp</td>
+      <td><%= post.content %></td>
+      <td>&nbsp</td>
+      <td><%= link_to 'Prikaži', post_path(post) %></td>
+      <td>&nbsp</td>
+      <td><%= link_to 'Uredi', edit_post_path(post) %></td>
+      <td>&nbsp</td>
+      <td><%= link_to 'Izbriši', post_path(post),
+              method: :delete,
+              data: { confirm: 'Jeste li sigurni?' } %></td>
+      <td>&nbsp</td>
+    </tr>
+  <% end %>
+</table>

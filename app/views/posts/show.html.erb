@@ -1,19 +1,19 @@
 
 <p>
   <strong>Naslov:</strong>
-  <%= @p.naslov %>
+  <%= @post.naslov %>
 </p>
  
 <p>
   <strong>Tekst:</strong>
-  <%= @p.content %>
+  <%= @post.content %>
 </p>
 
 <h2>Komentari</h2>
-<%= render @p.komentars %>
+<%= render @post.komentars %>
 
 <h2>Dodaj komentar:</h2>
-<%= render 'komentars/form' %>
+<%= render 'komentars/komentar' %>
  
 <!--<%= link_to 'Uredi', edit_article_path(@article) %> |
 <%= link_to 'Nazad', articles_path %>-->

@@ -3,7 +3,7 @@ class KomentarsController < ApplicationController
     def create
         @post = Post.find(params[:post_id])
         @komentar = @post.komentars.create(komentar_params)
-        redirect_to article_path(@article)
+        redirect_to post_path(@post)
       end
 
       def destroy
