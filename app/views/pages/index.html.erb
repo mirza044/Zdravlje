@@ -64,20 +64,28 @@ h1 {
         </p>
         </div>
     </div>
+
     <div class="col-6">
         <%= render'/posts/post_form' %><% if user_signed_in? %> <br> <%end%> <br>
 
     <% for @p in @posts %>
     <div class="card">
-        <div class="card-body row">
-       
-            <div class="col-sm-1">
+
+    <div class="card-header row">
+        <div class="col-sm-1">
             <img src="/Twitter.png" class="rounded-img" height="50px" width="50px"></img>
-            </div>
-            <div class="col-sm-11">
+        </div>
+        <div class="col-sm-11">
             <h3 class="post-title" style="color:black"><%= @p.naslov %></h3>
-            <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
-            <p class="post-content"><%= @p.content %></p>
+        </div>
+
+  </div>
+
+        <div class="card-body bg-transparent row">
+       
+            <div class="col-sm-12">
+            <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation"> - <%= @p.created_at.to_formatted_s(:short) %></span></p>
+            <p class="card-text"><%= @p.content %></p>
             </div>
             <div class="col-sm-12">
             <p class="post.links">
@@ -86,7 +94,8 @@ h1 {
             <span class="o-icon"><%= octicon "git-compare" %> </span>
             <span class="o-icon"><%= octicon "heart" %> </span>
             <span class="o-icon"><%= octicon "kebab-horizontal" %> </span>-->
-            <a href="">Prikaži</a>
+            
+            <a href="" style="float: right">Prikaži</a>
             
             </p>
             </div>
@@ -99,6 +108,7 @@ h1 {
             <div class="col-sm-12">
             <center><img src="/Twitter.png" height="25px" width="25px"></img>
             <a href="#top"><p class="opacity: .7;">Vrati se na vrh <%= octicon "arrow-up" %></p></a></center>
+            <div style="text-align: center; opacity: .7">© 2018 Zdravlje</div>
             </div>
         </div>
 </div>
