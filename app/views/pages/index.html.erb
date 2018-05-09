@@ -75,6 +75,7 @@ h1 {
             <img src="/Twitter.png" class="rounded-img" height="50px" width="50px"></img>
             </div>
             <div class="col-sm-11">
+            <h3 class="post-title" style="color:black"><%= @p.naslov %></h3>
             <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
             <p class="post-content"><%= @p.content %></p>
             </div>
