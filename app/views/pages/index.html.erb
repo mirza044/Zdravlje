@@ -69,7 +69,7 @@ h1 {
         <%= render'/posts/post_form' %><% if user_signed_in? %> <br> <%end%> <br>
 
     <% for @p in @posts %>
-    <div class="card">
+    <div class="card row">
 
     <div class="card-header row">
         <div class="col-sm-1">
@@ -81,7 +81,7 @@ h1 {
 
   </div>
 
-        <div class="card-body bg-transparent row">
+        <div class="card-body row">
        
             <div class="col-sm-12">
             <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation"> - <%= @p.created_at.to_formatted_s(:short) %></span></p>
