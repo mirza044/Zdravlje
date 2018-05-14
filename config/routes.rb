@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'store/index'
+
   get 'welcome/index'
 
   devise_for :users
