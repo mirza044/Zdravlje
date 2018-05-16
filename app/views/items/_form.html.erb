@@ -1,0 +1,53 @@
+
+<div class="card post-form-card">
+  <div class="card-body row">
+
+    <%= simple_form_for @item, html: { multipart: true } do |f| %>
+      <%= f.error_notification %>
+
+      <div class="col-sm-12">
+
+          <div class="field" style="margin-left: 10px;">
+              <%= f.label :title %> <br />
+              <%= f.text_field :title, required: true, class: "form-control" %>
+          </div>
+          <br />
+
+          <div class="field" style="margin-left: 10px;">
+            <%= f.input :price, required: true, input_html: { class:"form-control", maxlength: 7  }, wrapper: false, label_html: { class:"label" } %>
+          </div>
+          <br />
+
+        <div class="field" style="margin-left: 10px;">
+            <%= f.label :description %> <br />          
+            <%= f.text_area :description, required: true, input_html: { class:"form-control" }, wrapper: false, label_html: { class:"label" } %>
+        </div>
+        <br />
+
+        
+
+        <div class="field">
+            <label class="label">Dodaj sliku</label>
+              <div class="file">
+              <label class="file-label">
+                <%= f.input :image, as: :file, input_html: { class:"file-input item-image" }, label: false, wrapper: false %>
+                  <span class="file-cta">
+                    <span class="file-icon"><i class="fa fa-upload"></i></span>
+                    <span class="file-label">Izaberi sliku...</span>
+                  </span>
+              </label>
+              </div>
+        </div>
+          <output id="list"></output>
+        <hr />
+
+        <div class="field is-grouped">
+          <div class="control">
+            <%= f.button :submit, class: 'button is-warning' %>
+            <%= link_to 'Otkaži', items_path, class:'button is-light' %>
+          </div>
+        </div>
+
+      <% end %>
+  </div>
+</div>
