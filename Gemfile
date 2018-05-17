@@ -12,14 +12,14 @@ gem 'devise'
 #use jqery as javascript library
 gem 'jquery-rails'
 #for twitter UI components inc. navbar
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 #use pg for heroku database
 #gem 'pg'
-#herolu pre-req
+#heroku pre-req
 #gem 'rails_12factor', group: :production #don't use locally, only on heroku
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -40,14 +40,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 #gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 4.0'
 gem 'gravatar_image_tag', '~> 1.2'
-gem 'carrierwave'
-gem 'mini_magick'
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'mini_magick', '~> 4.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
