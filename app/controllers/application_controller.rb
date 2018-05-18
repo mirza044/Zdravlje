@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   #call the configured params
   before_action :configure_permitted_parameters, if: :devise_controller?
-  
+
+  include CurrentCart
+  before_action :set_cart
   
   #protect the database, while allowing these fields to be updated.
   protected
