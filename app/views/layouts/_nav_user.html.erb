@@ -1,7 +1,7 @@
 <a name="top"></a>
 <nav class="navbar navbar-expand-lg navbar-light bg-light container">
   <!--<a class="navbar-brand" href="/">Twitter Clone</a>-->
-    <img class="navbar-brand" src="/zdravljelogo.png"></img>
+    <!--<img class="navbar-brand" src="/zdravljelogo.png"></img>-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,20 +25,33 @@
     </ul>
 
   <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pretraga" aria-label="Search">
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="Pretraga" aria-label="Search">-->
       <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pretraga</button>-->
+      
+      <% if cart_has_items %>
+      <button type="button" class="btn btn-warning">
+              <%= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
+              <span class="icon is-small"> <i class="fa fa-shopping-cart"></i> </span>
+              <span>Cart <span class="badge badge-light"> <%= cart_count_over_one %> </span></span>
+              <% end %>
+      </button>
+        <% end %>
+        
     </form>
   </div>
 
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav m1-auto">
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <!--<img src="/Twitter.png" class="rounded-img" height="25px" width="25px">-->
         <!--<%= current_user.username %>-->
-        Navigacija
+        
+        <span class="btn">Navigacija</span>
+        
+        
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="/user/<%= current_user.username %>">Profil</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" <%= link_to('Postavke', edit_user_registration_path) %></a>
@@ -47,7 +60,9 @@
         </div>
         <li class="nav-item">
         <!--<a class="nav-link" href="#">Dodaj poruku </a>-->
-          <button class="btn btn-primary navbar-btn">Dodaj poruku</button>
+        
+        <span class="btn btn-submit" ><%= link_to 'Prodaja', new_item_path, class: "btn btn-primary" %></span>
+          <!--<button class="btn btn-primary navbar-btn">Prodaja</button>-->
       </li>
       </li>
     </ul>

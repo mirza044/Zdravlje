@@ -14,7 +14,7 @@
         <%= truncate(line_item.item.description, length: 140) %>
       </div>
       <div class="column is-3 has-text-right">
-        
+        <strong class="f4"><%= number_to_currency(line_item.total_price) %></strong>
       </div>
     </div>
   </div>

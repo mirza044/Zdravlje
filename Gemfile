@@ -49,6 +49,7 @@ gem 'simple_form', '~> 4.0'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
+gem "font-awesome-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
