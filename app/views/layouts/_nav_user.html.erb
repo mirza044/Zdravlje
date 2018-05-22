@@ -13,13 +13,13 @@
             <a class="nav-link" href="/home">Početna </a>    
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/explore">Istraži </a>
+        <a class="nav-link" href="/items">Proizvodi </a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/home">Obavijesti </a>
+        <a class="nav-link" href="/about">O nama </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/home">Poruke </a>
+        <a class="nav-link" href="/explore">Objavi vijest </a>
       </li>
 
     </ul>
@@ -29,13 +29,13 @@
       <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pretraga</button>-->
       
       <% if cart_has_items %>
-      <button type="button" class="btn btn-warning">
+      
               <%= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
               <span class="icon is-small"> <i class="fa fa-shopping-cart"></i> </span>
-              <span>Cart <span class="badge badge-light"> <%= cart_count_over_one %> </span></span>
+              <span>Cart <span class="badge btn-success"> <%= cart_count_over_one %> </span></span>
               <% end %>
-      </button>
-        <% end %>
+      
+      <% end %>
         
     </form>
   </div>
@@ -52,7 +52,7 @@
         
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/user/<%= current_user.username %>">Profil</a>
+          <a class="dropdown-item" href="/user/<%= current_user.username %>">Administracija</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" <%= link_to('Postavke', edit_user_registration_path) %></a>
           <div class="dropdown-divider"></div>

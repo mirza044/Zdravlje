@@ -50,6 +50,7 @@ gem 'gravatar_image_tag', '~> 1.2'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
 gem "font-awesome-rails"
+#gem "bulma-rails", "~> 0.7.1"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -18,6 +18,7 @@ $link-hover: #222;
  @import "bootstrap";
  @import "functions";
  @import "font-awesome";
+ /*@import "bulma";*/
 
  body {
 
@@ -49,7 +50,7 @@ $link-hover: #222;
 
  .post-content {
     text-align:left;
-    margin-left:15px;
+    /*margin-left:15px;*/
  }
 
  .post-links {
@@ -72,7 +73,7 @@ $link-hover: #222;
  }
 
  .post-form-card {
-     margin-bottom: -48px;
+     /*margin-bottom: -48px;*/
  }
 
  .profile-banner {

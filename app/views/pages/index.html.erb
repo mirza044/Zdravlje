@@ -2,7 +2,7 @@
 <style>
 html { /*html tag replaced with body tag*/
     background:linear-gradient(/*somewhat transparent film on top of the BG to make it look darker.*/
-        rgba(0,0,0, 0.0),
+        rgba(255, 255, 255, 0.90),
         rgba(0,0,0, 0.5)),url("first_image.jpg") no-repeat center center fixed;
     /*only display once, center horizontal and vertical, dont let scroll change position.*/
     
@@ -54,7 +54,7 @@ h1 {
 
 <div class="row">
 
-    <div class="col">
+    <!--<div class="col">
         <div class="col-sm-12" style="margin-top: -70px">
             <img src="/zdravljelogo.png" height="50px" widht="100px" class="rounded-img">
         </div>
@@ -64,6 +64,31 @@ h1 {
         Zdrava ishrana, prirodni sokovi i svježe voće i povrće.
         </p>
         </div>
+    </div>-->
+
+    <div class="col-3">
+        <div class="card">
+            <!--<img class="card-img-top" src="zdravljelogo.png" height="20px" width="20px" alt="Zdravlje">-->
+                <div class="card-body row">
+                    <div class="col-sm-12">
+                        <img src="/zdravljelogo.png" height="50px" width="auto" class="rounded-img">
+                    </div>
+                    <!--<div class="col-sm-10">
+                        <h4 style="margin-left:20px;"> current_user.username ></h4>
+                    </div>-->
+                    <div class="col-sm-12 row" style="margin-top: 10px;">
+                        <!--<div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">POSTS<br>
+                            <h6 style="color:#0084B4; font-size: 200%;"> current_user.posts.count </h6>
+                        </div>
+                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">FOLLOWERS<br>
+                            <h6 style="color:#0084B4; font-size: 200%;"> current_user.followers.count </h6>
+                        </div>-->
+                        <div class="col-sm-12" style="font-size: 90%; opacity: 0.7;">Prirodni sokovi, svježe voće i povrće.
+                        </div>
+                    </div>
+                </div>
+        </div>
+
     </div>
 
     <div class="col-6">
@@ -73,14 +98,14 @@ h1 {
     <% for @p in @posts %>
     <div class="card mb-3 row">
 
-        <div class="card-header row">
-        <div class="col-sm-3">
+        <div class="card-header col-sm-12">
+        <!--<div class="col-sm-3">
             <img src="/zdravljelogo.png" class="rounded-img" height="40px" width="100px"></img>
-        </div>
-
-        <div class="col-sm-9">
+        </div>-->
+        
+        
             <h3 class="post-title" style="color:black"><%= @p.naslov %></h3>
-        </div>
+        
         </div>
 
         <div class="card-body row">
@@ -109,8 +134,8 @@ h1 {
     <div class="card row">
         <div class="card-body">
             <div class="col-sm-12">
-            <center><img src="/Twitter.png" height="25px" width="25px"></img>
-            <a href="#top"><p class="opacity: .7;">Vrati se na vrh <%= octicon "arrow-up" %></p></a></center>
+            <!--<center><img src="/Twitter.png" height="25px" width="25px"></img>-->
+            <center><a href="#top"><p class="opacity: .7;">Vrati se na vrh <%= octicon "arrow-up" %></p></a></center>
             <div style="text-align: center; opacity: .7">© 2018 Zdravlje</div>
             </div>
         </div>

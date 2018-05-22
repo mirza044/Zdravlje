@@ -42,5 +42,10 @@ class PagesController < ApplicationController
     @toFollow=User.all.last(5)
   end
 
+  def about
+    @posts = Post.all
+    @newPost = Post.new
+  end
+
 
 end
