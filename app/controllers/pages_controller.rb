@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     @posts = Post.all
     @newPost = Post.new
     @toFollow=User.all.last(5)
+    
   end
 
   #back-end code for pages/home
@@ -47,5 +48,9 @@ class PagesController < ApplicationController
     @newPost = Post.new
   end
 
+  private
+    def post_params #allows certain data to be passed via form.
+        params.require(:post).permit(:user_id, :content, :naslov)
+    end
 
 end
