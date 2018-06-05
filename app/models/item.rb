@@ -6,8 +6,8 @@ class Item < ApplicationRecord
     serialize :image, JSON #if you use SQLite, add this line
 
     validates :title, :price, presence: true
-    validates :description, length: { maximum: 1000, too_long: "dovoljeno je maksimalno %{count} karakterta. "}
-    validates :title, length: { maximum: 140, too_long: "dovoljeno je maksimalno %{count} karakterta. "}
+    validates :description, length: { maximum: 1000, too_long: "dozvoljeno je maksimalno %{count} karakterta. "}
+    validates :title, length: { maximum: 140, too_long: "dozvoljeno je maksimalno %{count} karakterta. "}
     validates :price, length: { maximum: 7 } #numericality: { only_integer: true },
     #validates :type, length: { maximum: 140, too_long: "dovoljeno je maksimalno %{count} karakterta. "}
 

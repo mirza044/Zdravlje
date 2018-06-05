@@ -8,16 +8,11 @@
                         <img src="/zdravljelogo.png" height="50px" width="auto" class="rounded-img">
                     </div>
                     <!--<div class="col-sm-10">
-                        <h4 style="margin-left:20px;"><%= current_user.username %></h4>
+                        
                     </div>-->
                     <div class="col-sm-12 row" style="margin-top: 10px;">
-                        <!--<div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">POSTS<br>
-                            <h6 style="color:#0084B4; font-size: 200%;"><%= current_user.posts.count %></h6>
-                        </div>
-                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">FOLLOWERS<br>
-                            <h6 style="color:#0084B4; font-size: 200%;"><%= current_user.followers.count %></h6>
-                        </div>-->
-                        <div class="col-sm-12" style="font-size: 90%; opacity: 0.7;">Zdrava ishrana, prirodni sokovi i svježe voće i povrće.
+                        
+                        <div class="col-sm-12" style="font-size: 90%; opacity: 0.7;">Prirodni sokovi, svježe voće i povrće.
                         </div>
                     </div>
                 </div>
@@ -105,16 +100,15 @@
         <div class="card-body">
             <div class="col-sm-12">
             <!--<center><img src="/Twitter.png" height="25px" width="25px"></img>-->
-            <div style="text-align: center; opacity: .7">© Zdravlje 2018</div>
+             <div style="text-align: center; opacity: .7">© Zdravlje 2018</div>
             <center>
                 <br>
                 
                 <a href="http://www.facebook.com"><img src="/Facebook.png" style="width:32px; height:32px" alt="Facebook"></a>
                 <a href="http://www.twitter.com"><img src="/Twitter.png" style="width:32px; height:32px" alt="Twitter"></a>
                 <br>
-                
-            </center>
-             
+                <hr>
+            <a href="#top"><p class="opacity: .7;">Vrati se na vrh <%= octicon "arrow-up" %></p></a></center>
             </div>
         </div>
     </div>
@@ -123,7 +117,33 @@
 
 
 <div class="col-3">
-    
+        
+        <div class="card">
+                <div class="card-body">
+                    <iframe width="300" height="300" frameborder="0" style="border:0"
+        <script>
+
+                    function myMap()
+                    {
+                        myCenter=new google.maps.LatLng(43.8573, 18.40275);
+                        var mapOptions= {center:myCenter, zoom:12, scrollwheel: true, draggable: true,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                        };
+                        var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+                        var marker = new google.maps.Marker({position: myCenter,
+                        });
+                        marker.setMap(map);
+                    }
+						
+					</script>
+					</div>
+
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANaoRqCq9KsHe_mWAHV-byVh212OK-VwU&callback=myMap"></script>
+                    </iframe>
+                </div>
+        </div>
+    </div>
 </div>
 
 <!--pocetak drugog reda (row 2)
