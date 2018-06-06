@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby "2.3.3" #specifiy ruby version
+ruby "2.3.3" #specifiy ruby version
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -16,11 +16,11 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 #use pg for heroku database
-#gem 'pg'
+gem 'pg'
 #heroku pre-req
-#gem 'rails_12factor', group: :production #don't use locally, only on heroku
+gem 'rails_12factor', group: :production #don't use locally, only on heroku
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
