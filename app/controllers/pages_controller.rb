@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   
   #back-end code for pages/home
   def index
-    @posts = Post.all
+    @posts = Post.paginate(:page => params[:page], :per_page => 5)
     @newPost = Post.new
     @toFollow=User.all.last(5)
     
@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
   #back-end code for pages/home
   def home
-    @posts = Post.all
+    @posts = Post.paginate(:page => params[:page], :per_page => 5)
     @newPost = Post.new
   end
 

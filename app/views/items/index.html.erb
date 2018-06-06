@@ -24,12 +24,14 @@
 
       <h3 class="fw7 f4 title"><%= link_to item.title, item %></h3>
 
-      <p class="has-text-gray fg pt1">Sold by <%= item.user.username %> </p>
+      <!--<p class="has-text-gray fg pt1">Sold by <%= item.user.username %> </p>-->
 
-      <p class="f3 fw6 has-text-right pt2 price"><%= (item.price) %> KM/kg</p>
+      <p class="f3 fw6 has-text-right pt2 price">Cijena: <%= (item.price) %> KM</p>
+      <hr>
 
       <% if item_author(item) %>
-         <%= link_to 'Uredi', edit_item_path(item), class: "button is-small" %>
+         <%= link_to 'Izmjeni', edit_item_path(item), class: "button is-small" %>
+         &nbsp
          <%= link_to 'Brisati', item, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small" %>
       <% end %>
     

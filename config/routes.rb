@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'companies/index'
+
+  get 'companies/show'
+
+  get 'companies/new'
+
+  get 'companies/edit'
+
+  get 'posts/edit'
+
   resources :line_items
   resources :carts
   resources :items
@@ -24,6 +34,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources "contacts", only: [:new, :create]
+
   #Define root page
   root 'pages#index'
 
@@ -35,6 +47,7 @@ Rails.application.routes.draw do
   get '/explore' => 'pages#explore'
   get '/new' => 'articles#new'
   get '/about' => 'pages#about'
+  get '/sendmail' => 'contacts#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

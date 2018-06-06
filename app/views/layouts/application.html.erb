@@ -6,11 +6,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+  <% unless controller_name == "contacts" %>
     <%= render '/layouts/nav' %>
     <%= render '/layouts/banner' %>
+    <% end %>
   
     <div class="container">
       <span class="notice"><%= notice %></span>

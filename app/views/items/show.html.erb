@@ -13,22 +13,24 @@
 
       <div class="content pa4 mt3 bg-white border-radius-3">
 
-      <h3 class="subtitle is-4">Description</h3>
-      <%= @item.description %>
+      <h6 class="subtitle is-4">O proizvodu:</h6>
+      <p><%= @item.description %></p>
+      
 
      
     </div>
     </div>
     <div class="column is-3 is-offset-1">
       <div class="bg-white pa4 border-radius-3">
-        <h4 class="title is-5 has-text-centered"><%= (@item.price) %> KM/kg</h4>
-        <p class="has-text-centered mb4">Sold by <%= @item.user.username %></p>
+      <hr>
+        <h4 class="title is-5 has-text-centered">Cijena: <%= (@item.price) %> KM</h4><br>
+        <!--<p class="has-text-centered mb4">Sold by <%= @item.user.username %></p>-->
         <%= button_to 'Add to cart', line_items_path(item_id: @item), class: 'button is-warning add-to-cart' %>
       </div>
     </div>
   </div>
 
   <% if item_author(@item) %>
-    <%= link_to 'Edit', edit_item_path(@item), class: 'button' %>
+    <%= link_to 'Izmjeni', edit_item_path(@item), class: 'button' %>
   <% end %>
 </section>

@@ -71,7 +71,7 @@ h1 {
             <!--<img class="card-img-top" src="zdravljelogo.png" height="20px" width="20px" alt="Zdravlje">-->
                 <div class="card-body row">
                     <div class="col-sm-12">
-                        <img src="/zdravljelogo.png" height="50px" width="auto" class="rounded-img">
+                        <img class="img-responsive" src="/zdravljelogo.png" alt="Zdravlje" style="width:100%; height:100%">
                     </div>
                     <!--<div class="col-sm-10">
                         <h4 style="margin-left:20px;"> current_user.username ></h4>
@@ -88,11 +88,24 @@ h1 {
                     </div>
                 </div>
         </div>
-
+        <div class="card">
+                <div class="card-body">
+                    <p style="color:grey; font size: 90%;">Pored vlastitog proizvoda soka od aronije, 
+                    nudimo razne vrste voća i povrća, sa posebnim naglaskom na domaće proizvode. Svi proizvodi su visoke kvalitete i organski uzgojeni.<br>
+                    Nudimo mogućnost <a href="/items">Online kupovine</a> i dostave na kućnu adresu</p>
+                    <hr>
+                    <p>Nalazimo se u ulici<br>
+                    Bulevar Meše Selimovića bb<br>
+                    Kontakt telefon:<br>
+                    033 000 000
+                    </p>
+                    
+                </div>
+            </div>
     </div>
 
     <div class="col-6">
-        <%= render'/posts/post_form' %><% if user_signed_in? %> <br> <%end%> <br>
+        <%= render'/posts/post_form' %><% if user_signed_in? %>  <%end%> 
     
 
     <% for @p in @posts %>
@@ -131,6 +144,12 @@ h1 {
         </div>
         </div>
         <% end %>
+    
+    <div class="card row">
+        <div class="digg_pagination">
+            <%= will_paginate @posts, :container => false %>
+        </div>
+    </div>
    
     <div class="card row">
         <div class="card-body">
@@ -155,9 +174,14 @@ h1 {
         
         <div class="card">
                 <div class="card-body">
-                    <h5 style="color:grey; font size: 125%;">Sok od aronije</h5>
+                    <a href="/items"><h5 style="color:grey; font size: 125%;">Sok od aronije</h5></a>
                     <p><img class="img-responsive" src="second_image.jpg" alt="Sok od aronije" style="float:left; width:20%; height:20%; margin-right:1em"></p>
-                    <p style="opacity: .7; font-size: 80%;">Kvalitet i pozitivna dejstva soka od aronije su dokazana u mnogim medicinskim studijama. Ljekoviti plodovi aronije smatraju se pravim čudom prirode. Biljka se uzgaja potpuno organski, tako da prilikom konzumiranja našeg soka od aronije možete biti potpuno sigurni da pijete prirodan sok. Nema štetnih pesticida koji se u današnjoj industriji itekako koriste. Aronija nije zahtjevna za uzgoj, a zbog svoje izuzetne ljekovitosti u nekim dijelovima svijeta svrstava se u ljekovito bilje. Dostupna je tri mjeseca u toku godine, a njen sok je zdraviji od sličnih proizvoda poput soka od borovnice, maline ili nara.
+                    <p style="opacity: .7; font-size: 80%;">Kvalitet i pozitivna dejstva soka od aronije su dokazana u mnogim medicinskim studijama. 
+                    Ljekoviti plodovi aronije smatraju se pravim čudom prirode. Biljka se uzgaja potpuno organski, 
+                    tako da prilikom konzumiranja našeg soka od aronije možete biti potpuno sigurni da pijete prirodan sok. 
+                    Nema štetnih pesticida koji se u današnjoj industriji itekako koriste. Aronija nije zahtjevna za uzgoj, 
+                    a zbog svoje izuzetne ljekovitosti u nekim dijelovima svijeta svrstava se u ljekovito bilje. 
+                    Dostupna je tri mjeseca u toku godine, a njen sok je zdraviji od sličnih proizvoda poput soka od borovnice, maline ili nara.
 					</p>
                 </div>
         </div>

@@ -1,5 +1,5 @@
 <div class="keep-shopping pv1 mt4 has-text-right">
-  <%= link_to 'Keep Shopping', items_path, class: 'button is-warning' %>
+  <%= link_to 'Nastavi sa kupovinom', items_path, class: 'button is-warning' %>
 </div>
 <hr />
 <section class="section">
@@ -7,11 +7,12 @@
 
   <div class="columns">
     <div class="column">
-      <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %>
+      <%= button_to 'Isprazni korpu', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %>
     </div>
     <div class="column total has-text-right">
       <h4 class="title is-4">
-        <span class="f5 has-text-grey">Total:</span> <%= number_to_currency(@cart.total_price) %>
+      <hr>
+        <span class="f5 has-text-grey">Ukupno:</span> <%= (@cart.total_price) %> KM
       </h4>
     </div>
   </div>

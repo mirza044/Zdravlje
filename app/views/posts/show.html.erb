@@ -1,19 +1,31 @@
 
-<p>
-  <strong>Naslov:</strong>
+<div class="row">
+<div class="col-12">
+<div class="card mb-3 row">
+<div class="card-header   col-sm-12">
+  <p><strong>Naslov:</strong></p>
   <%= @post.naslov %>
-</p>
- 
-<p>
-  <strong>Tekst:</strong>
-  <%= @post.content %>
-</p>
+</div>
 
-<h2>Komentari</h2>
+ <div class="card-body">
+  <p><strong>Tekst:</strong></p>
+ 
+  
+  <p><%= @post.content %></p>
+  
+  
+
+
+<!--<h2>Komentari</h2>
 <%= render @post.komentars %>
 
 <h2>Dodaj komentar:</h2>
-<%= render 'komentars/form' %>
+<%= render 'komentars/form' %>-->
  
-<%= link_to 'Uredi', edit_post_path(@post) %>
-<%= link_to 'Nazad', posts_path %>
+<span style="float:right;"><%= link_to 'Uredi', edit_post_path(@post) %>
+&nbsp
+<%= link_to 'Nazad', posts_path %></span>
+</div>
+</div>
+</div>
+</div>

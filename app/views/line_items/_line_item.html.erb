@@ -1,6 +1,6 @@
 <div class="columns align-items-center">
   <div class="column is-1">
-    <%= line_item.quantity %>
+    Količina: <%= line_item.quantity %>
   </div>
   <div class="column is-2">
     <figure class="is-128x128 image">
@@ -14,14 +14,14 @@
         <%= truncate(line_item.item.description, length: 140) %>
       </div>
       <div class="column is-3 has-text-right">
-        <strong class="f4"><%= number_to_currency(line_item.total_price) %></strong>
+        <strong class="f4">Cijena: <%= (line_item.total_price) %> KM</strong>
       </div>
     </div>
   </div>
 </div>
 
 <div class="has-text-right">
-  <%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-small mb4" %>
+  <%= link_to 'Ukloni proizvod', line_item, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-small mb4" %>
 </div>
 
 <hr/ >
