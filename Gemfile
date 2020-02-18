@@ -12,7 +12,7 @@ gem 'devise'
 #use jqery as javascript library
 gem 'jquery-rails'
 #for twitter UI components inc. navbar
-gem 'bootstrap', '~> 4.1', '>= 4.1.1'
+gem 'bootstrap', '~> 4.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
