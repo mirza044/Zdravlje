@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(version: 20180606061802) do
   create_table "komentars", force: :cascade do |t|
     t.string "ime"
     t.text "tekst"
-    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "post_id"
     t.index ["post_id"], name: "index_komentars_on_post_id"
   end
 
