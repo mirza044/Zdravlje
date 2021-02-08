@@ -47,7 +47,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 gem 'simple_form', '~> 4.0'
 gem 'gravatar_image_tag', '~> 1.2'
-gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.8'
 gem "font-awesome-rails"
 gem 'mail_form'
